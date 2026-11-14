@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA Sin Consola — herramienta de publicación</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; padding: 56px 24px;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #e8ecf6; background: #0b0d13;
+    background-image:
+      radial-gradient(900px 420px at 50% -10%, rgba(255,45,120,.22), transparent 70%),
+      radial-gradient(700px 380px at 90% 110%, rgba(34,211,238,.10), transparent 70%);
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  .mark {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 13px; letter-spacing: .14em; text-transform: uppercase;
+    color: #22d3ee; margin-bottom: 28px;
+  }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: #ff2d78; box-shadow: 0 0 14px #ff2d78; }
+  h1 { font-size: clamp(30px, 5vw, 44px); line-height: 1.12; margin: 0 0 18px; letter-spacing: -.02em; }
+  h1 em { font-style: normal; color: #ff2d78; }
+  .lead { font-size: 18px; color: #b9c2d8; margin: 0 0 36px; }
+  section { border-top: 1px solid #1e2435; padding: 26px 0; }
+  h2 { font-size: 15px; letter-spacing: .1em; text-transform: uppercase; color: #7d8aa8; margin: 0 0 12px; }
+  ul { margin: 0; padding-left: 20px; color: #c6cee2; }
+  li { margin: 7px 0; }
+  a { color: #22d3ee; text-decoration: none; border-bottom: 1px solid rgba(34,211,238,.3); }
+  a:hover { border-bottom-color: #22d3ee; }
+  .links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px; }
+  .links a {
+    border: 1px solid #26304a; border-radius: 10px; padding: 12px 18px;
+    background: #11151f; color: #e8ecf6; font-size: 15px;
+  }
+  .links a:hover { border-color: #ff2d78; }
+  footer { margin-top: 44px; font-size: 13px; color: #6b7691; border-top: 1px solid #1e2435; padding-top: 22px; }
+  code { background: #161b27; padding: 2px 6px; border-radius: 5px; font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="mark"><span class="dot"></span> GTA Sin Consola</div>
+
+  <h1>Herramienta interna de edición y publicación para un <em>canal de YouTube</em>.</h1>
+
+  <p class="lead">
+    Esta aplicación es una utilidad de escritorio que el operador del canal
+    <strong>GTA Sin Consola</strong> ejecuta en su propio equipo para preparar clips y
+    programar sus publicaciones. No es un servicio abierto al público, no tiene
+    registro de usuarios y no recibe datos de terceros.
+  </p>
+
+  <section>
+    <h2>Qué hace</h2>
+    <ul>
+      <li>Procesa localmente material de video que el propio operador ya posee o tiene licencia para usar.</li>
+      <li>Genera cortes verticales con subtítulos y los deja listos para revisión.</li>
+      <li>Se conecta a la cuenta de YouTube del operador, mediante el consentimiento OAuth de Google, para subir y calendarizar esos videos.</li>
+      <li>Consulta las estadísticas del propio canal para mostrar cuánto falta para los requisitos de monetización.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Qué no hace</h2>
+    <ul>
+      <li>No procesa datos de espectadores ni de otros usuarios de YouTube.</li>
+      <li>No envía información a servidores propios: no existe backend ni base de datos remota.</li>
+      <li>No vende, comparte ni usa datos para publicidad o perfilado.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Documentos legales</h2>
+    <div class="links">
+      <a href="./privacidad.html">Política de Privacidad</a>
+      <a href="./terminos.html">Condiciones del Servicio</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contacto</h2>
+    <p style="margin:0;color:#c6cee2">
+      <a href="mailto:knockoutmediamexico@gmail.com">knockoutmediamexico@gmail.com</a>
+    </p>
+  </section>
+
+  <footer>
+    Última actualización: 14 de noviembre de 2026.<br>
+    GTA Sin Consola no está afiliado a Rockstar Games ni a Take-Two Interactive.
+  </footer>
+</main>
+</body>
+</html>

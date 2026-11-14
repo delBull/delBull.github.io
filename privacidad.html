@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidad — GTA Sin Consola</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; padding: 56px 24px;
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #e8ecf6; background: #0b0d13;
+    background-image: radial-gradient(900px 400px at 50% -10%, rgba(255,45,120,.16), transparent 70%);
+  }
+  main { max-width: 760px; margin: 0 auto; }
+  .mark { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: #22d3ee; margin-bottom: 26px; }
+  h1 { font-size: clamp(28px, 4.6vw, 40px); margin: 0 0 8px; letter-spacing: -.02em; }
+  .date { color: #7d8aa8; font-size: 14px; margin: 0 0 34px; }
+  h2 { font-size: 19px; margin: 34px 0 10px; color: #ff9ac0; }
+  p, li { color: #c6cee2; }
+  ul { padding-left: 20px; }
+  li { margin: 7px 0; }
+  a { color: #22d3ee; text-decoration: none; border-bottom: 1px solid rgba(34,211,238,.3); }
+  .box {
+    background: #11151f; border: 1px solid #26304a; border-left: 3px solid #ff2d78;
+    border-radius: 10px; padding: 18px 20px; margin: 26px 0;
+  }
+  .box p { margin: 0; }
+  code { background: #161b27; padding: 2px 6px; border-radius: 5px; font-size: 14px; }
+  footer { margin-top: 46px; font-size: 13px; color: #6b7691; border-top: 1px solid #1e2435; padding-top: 20px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="mark">GTA Sin Consola</div>
+
+  <h1>Política de Privacidad</h1>
+  <p class="date">Última actualización: 14 de noviembre de 2026</p>
+
+  <p>
+    Esta política describe cómo la herramienta de publicación del canal
+    <strong>GTA Sin Consola</strong> (en adelante, «la Aplicación») trata la información
+    a la que accede. La Aplicación es una utilidad de escritorio de uso privado: la ejecuta
+    únicamente el operador del canal, en su propio equipo.
+  </p>
+
+  <h2>1. Quién opera la Aplicación</h2>
+  <p>
+    La Aplicación es operada por el responsable del canal de YouTube «GTA Sin Consola».
+    Contacto para cualquier asunto de privacidad:
+    <a href="mailto:knockoutmediamexico@gmail.com">knockoutmediamexico@gmail.com</a>.
+  </p>
+
+  <h2>2. Qué información se obtiene de Google</h2>
+  <p>
+    Previa autorización expresa del operador mediante el flujo OAuth de Google, la
+    Aplicación solicita tres permisos, todos ellos sobre la propia cuenta de YouTube
+    del operador:
+  </p>
+  <ul>
+    <li><code>youtube.upload</code> — subir videos a la cuenta del operador.</li>
+    <li><code>youtube</code> — gestionar metadatos de esos mismos videos (título, descripción, etiquetas, visibilidad).</li>
+    <li><code>yt-analytics.readonly</code> — leer estadísticas del canal del operador (vistas, retención, suscriptores).</li>
+  </ul>
+  <p>
+    La Aplicación no solicita acceso a Gmail, Contactos, Drive, Calendario ni a ninguna
+    otra cuenta de Google.
+  </p>
+
+  <h2>3. Dónde se almacena la información</h2>
+  <p>
+    El token de acceso se guarda <strong>únicamente en el disco local del equipo del operador</strong>,
+    en el archivo <code>config/token.json</code>. Las estadísticas del canal se guardan en
+    <code>data/stats.json</code>, también localmente.
+  </p>
+  <ul>
+    <li>No existe servidor, base de datos remota ni backend propio.</li>
+    <li>La información no se transmite a terceros, ni se vende, ni se comparte.</li>
+    <li>No se usa para publicidad, perfilado, scoring crediticio ni entrenamiento de modelos.</li>
+    <li>No se recopilan datos de espectadores ni de otros usuarios de YouTube.</li>
+  </ul>
+
+  <h2>4. Uso limitado de datos de Google</h2>
+  <div class="box">
+    <p>
+      El uso que la Aplicación hace de la información recibida de las API de Google cumple
+      con la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Política de Datos de Usuario de los Servicios API de Google</a>,
+      incluidos los requisitos de <strong>Uso Limitado</strong> (Limited Use).
+      Los datos obtenidos solo se emplean para las funciones descritas en esta política.
+    </p>
+  </div>
+
+  <h2>5. Conservación y eliminación</h2>
+  <p>
+    El token permanece en el equipo hasta que el operador lo revoca o lo borra. Para
+    revocar el acceso en cualquier momento:
+  </p>
+  <ul>
+    <li>En Google: <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a> → seleccionar la Aplicación → «Quitar acceso».</li>
+    <li>En el equipo: eliminar el archivo <code>config/token.json</code>.</li>
+  </ul>
+  <p>
+    Al revocar el acceso, la Aplicación deja de poder leer o modificar la cuenta de YouTube.
+    Los videos ya publicados permanecen en el canal, bajo control del operador.
+  </p>
+
+  <h2>6. Seguridad</h2>
+  <p>
+    El token se mantiene en un directorio local del equipo del operador, sin exposición
+    pública. La Aplicación no transmite credenciales a ningún servicio distinto de los
+    servidores de Google.
+  </p>
+
+  <h2>7. Menores de edad</h2>
+  <p>
+    La Aplicación no está dirigida a menores y no recopila información de ninguna persona
+    distinta del propio operador.
+  </p>
+
+  <h2>8. Cambios a esta política</h2>
+  <p>
+    Cualquier cambio se publicará en esta misma página, actualizando la fecha del encabezado.
+  </p>
+
+  <h2>9. Contacto</h2>
+  <p>
+    <a href="mailto:knockoutmediamexico@gmail.com">knockoutmediamexico@gmail.com</a>
+  </p>
+
+  <hr style="border:0;border-top:1px solid #1e2435;margin:40px 0 0">
+
+  <h2 style="font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:#7d8aa8">Summary in English</h2>
+  <p style="font-size:14px">
+    This is a private desktop utility used by the operator of the «GTA Sin Consola» YouTube
+    channel to edit and publish his own videos. It requests only <code>youtube.upload</code>,
+    <code>youtube</code> and <code>yt-analytics.readonly</code> scopes on the operator's own
+    account. OAuth tokens and channel statistics are stored locally on the operator's machine;
+    there is no server, no third-party sharing, no advertising and no profiling. The use of
+    Google API data adheres to the Google API Services User Data Policy, including Limited Use
+    requirements. Revoke access at
+    <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>.
+    Contact: <a href="mailto:knockoutmediamexico@gmail.com">knockoutmediamexico@gmail.com</a>.
+  </p>
+
+  <footer>
+    GTA Sin Consola no está afiliado a Rockstar Games ni a Take-Two Interactive.
+    Las marcas mencionadas pertenecen a sus respectivos titulares.
+  </footer>
+</main>
+</body>
+</html>
